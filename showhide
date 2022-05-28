@@ -1,0 +1,10 @@
+local Uis, Key = game:GetService"UserInputService", "WhateverKeyHere";
+
+Uis.InputBegan:Connect(function(Key)
+   if not Uis:GetFocusedTextBox() then
+       if Key.KeyCode == Enum.KeyCode[F1] then
+           YourGuiPath.Visible = not YourGuiPath.Visible
+           -- if you want to destroy it then this: YourGuiPath:Destroy()
+       end
+   end
+end)
